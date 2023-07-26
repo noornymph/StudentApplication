@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     DBHandler dbHandler;
     private Context context;
 
-    private ArrayList<Model> data_holder;
+    private ArrayList<Model> dataholder;
 
 
     private MyAdapterClass adapter;
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String query = editText.getText().toString();
-                filterStudentList(query, data_holder);
+                filterStudentList(query, dataholder);
             }
         });
 
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         dbHandler = new DBHandler(MainActivity.this);
 
-        data_holder = new ArrayList<Model>();
+        dataholder = new ArrayList<Model>();
         adapter = new MyAdapterClass(context, dataholder);
 
         recyclerView.setAdapter(adapter);
