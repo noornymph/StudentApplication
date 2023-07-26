@@ -37,7 +37,7 @@ public class FirstAct extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://github.com/nouman531/Assignment03"));
+                intent.setData(Uri.parse("https://github.com/noornymph?tab=repositories"));
                 startActivity(intent);
 
             }
