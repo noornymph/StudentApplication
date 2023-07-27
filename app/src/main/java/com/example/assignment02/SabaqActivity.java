@@ -63,22 +63,22 @@ public class SabaqActivity extends AppCompatActivity {
 
         if (cursor != null && cursor.moveToFirst()) {
             // Retrieve the data from the cursor
-            @SuppressLint("Range") String stdrollNum = cursor.getString(cursor.getColumnIndex("rollno_fk"));
-            @SuppressLint("Range") String stdSabaq = cursor.getString(cursor.getColumnIndex("sabaq"));
-            @SuppressLint("Range") String stdSabaqi = cursor.getString(cursor.getColumnIndex("sabaqi"));
-            @SuppressLint("Range") String stdManzil = cursor.getString(cursor.getColumnIndex("manzil"));
+            @SuppressLint("Range") String std_rollNum = cursor.getString(cursor.getColumnIndex("rollno_fk"));
+            @SuppressLint("Range") String std_Sabaq = cursor.getString(cursor.getColumnIndex("sabaq"));
+            @SuppressLint("Range") String std_Sabaqi = cursor.getString(cursor.getColumnIndex("sabaqi"));
+            @SuppressLint("Range") String std_Manzil = cursor.getString(cursor.getColumnIndex("manzil"));
 
             // Set the retrieved data in the TextViews
-            rollnum.setText("Roll Number : " + stdrollNum);
-            sabaq.setText("Sabaq : " + stdSabaq);
-            sabaqi.setText("Sabaqi : " + stdSabaqi);
-            manzil.setText("Manzil : " + stdManzil);
+            rollnum.setText("Roll Number : " + std_rollNum);
+            sabaq.setText("Sabaq : " + std_Sabaq);
+            sabaqi.setText("Sabaqi : " + std_Sabaqi);
+            manzil.setText("Manzil : " + std_Manzil);
 
 
-            stdRollnumber=stdrollNum;
-            stdSabaqValue = stdSabaq;
-            stdSabaqiValue = stdSabaqi;
-            stdManzilValue = stdManzil;
+            stdRollnumber=std_rollNum;
+            stdSabaqValue = std_Sabaq;
+            stdSabaqiValue = std_Sabaqi;
+            stdManzilValue = std_Manzil;
 
             cursor.close();
         } else {

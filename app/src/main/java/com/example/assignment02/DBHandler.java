@@ -111,7 +111,8 @@ public class DBHandler extends SQLiteOpenHelper {
             if (context != null) {
                 Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
             }
-        } else {
+        } else
+        {
             if (context != null) {
                 Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
             }
