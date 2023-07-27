@@ -15,8 +15,6 @@ import android.widget.Toast;
 public class SabaqActivity extends AppCompatActivity {
     Context context;
 
-    private DBHandler dbHandler;
-    private TextView rollnum;
     private TextView sabaq;
     private TextView sabaqi;
     private TextView manzil;
