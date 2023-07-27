@@ -97,10 +97,10 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-    public void AddStudents(String rollnum, String name, String age, String cls) {
+    public void AddStudents(String roll_num, String name, String age, String cls) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put(RollNum, rollnum);
+        cv.put(RollNum, roll_num);
         cv.put(Name, name);
         cv.put(Age, age);
         cv.put(StdClass, cls);
@@ -163,21 +163,21 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-    public void updateDataAndSaveHistorical(String rollNum, String newsabaq,String newSabaqi, String newManzil) {
+    public void updateDataAndSaveHistorical(String rollNum, String new_sabaq,String new_Sabaqi, String newManzil) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         // Update the data in the main table
         ContentValues values = new ContentValues();
-        values.put(Sabaq,newsabaq);
-        values.put(Sabaqi, newSabaqi);
+        values.put(Sabaq,new_sabaq);
+        values.put(Sabaqi, new_Sabaqi);
         values.put(Manzil, newManzil);
         db.update(Table_Name_Tasks, values, RollNumFK + " = ?", new String[]{rollNum});
 
         // Save the previous data as a historical record
         ContentValues historicalValues = new ContentValues();
         historicalValues.put(KEY_ROLL_NUM, rollNum);
-        historicalValues.put(KEY_SABAQ, newsabaq);
-        historicalValues.put(KEY_SABAQI, newSabaqi);
+        historicalValues.put(KEY_SABAQ, new_sabaq);
+        historicalValues.put(KEY_SABAQI, new_Sabaqi);
         historicalValues.put(KEY_MANZIL, newManzil);
         historicalValues.put(KEY_TIMESTAMP, getCurrentTimestamp());
         db.insert(History_Table, null, historicalValues);
